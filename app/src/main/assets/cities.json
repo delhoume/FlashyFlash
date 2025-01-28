@@ -1,0 +1,692 @@
+{
+  "aixenprovence": {
+    "code": "AIX",
+    "name": "Aix-en-Provence",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 10,
+    "score": 160
+  },
+  "amsterdam": {
+    "code": "AMS",
+    "name": "Amsterdam",
+    "country": "nl",
+    "waves": 1,
+    "invaders": 26,
+    "score": 370
+  },
+  "anvers": {
+    "code": "ANVR",
+    "name": "Antwerp",
+    "country": "be",
+    "waves": 1,
+    "invaders": 2,
+    "score": 20
+  },
+  "anzere": {
+    "code": "ANZR",
+    "name": "Anzère",
+    "country": "ch",
+    "waves": 1,
+    "invaders": 4,
+    "score": 110
+  },
+  "avignon": {
+    "code": "AVI",
+    "name": "Avignon",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 41,
+    "score": 710
+  },
+  "bangkok": {
+    "code": "BGK",
+    "name": "Bangkok",
+    "country": "th",
+    "waves": 2,
+    "invaders": 51,
+    "score": 890
+  },
+  "biarrizangletbayonne": {
+    "code": "BAB",
+    "name": "Biarritz Anglet Bayonne",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 60,
+    "score": 2050
+  },
+  "barcelone": {
+    "code": "BRC",
+    "name": "Barcelone",
+    "country": "es",
+    "waves": 1,
+    "invaders": 17,
+    "score": 290
+  },
+  "basel": {
+    "code": "BSL",
+    "name": "Basel",
+    "country": "ch",
+    "waves": 2,
+    "invaders": 25,
+    "score": 840
+  },
+  "bastia": {
+    "code": "BTA",
+    "name": "Bastia",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 34,
+    "score": 530
+  },
+  "berlin": {
+    "code": "BRL",
+    "name": "Berlin",
+    "country": "de",
+    "waves": 2,
+    "invaders": 12,
+    "score": 300
+  },
+  "bern": {
+    "code": "BRN",
+    "name": "Bern",
+    "country": "ch",
+    "waves": 1,
+    "invaders": 29,
+    "score": 740
+  },
+  "bhutan": {
+    "code": "BT",
+    "name": "Bhutan",
+    "country": "bt",
+    "waves": 1,
+    "invaders": 11,
+    "score": 490
+  },
+  "bilbao": {
+    "code": "BBO",
+    "name": "Bilbao",
+    "country": "es",
+    "waves": 2,
+    "invaders": 40,
+    "score": 1110
+  },
+  "bruxelles": {
+    "code": "BXL",
+    "name": "Brussels",
+    "country": "be",
+    "waves": 2,
+    "invaders": 42,
+    "score": 1210
+  },
+  "cancun": {
+    "code": "CCU",
+    "name": "Cancún",
+    "country": "mx",
+    "waves": 1,
+    "invaders": 3,
+    "score": 80
+  },
+  "capferret": {
+    "code": "CAPF",
+    "name": "Cap Ferret",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 10,
+    "score": 310
+  },
+  "charleroi": {
+    "code": "CHAR",
+    "name": "Charleroi",
+    "country": "be",
+    "waves": 1,
+    "invaders": 1,
+    "score": 100
+  },
+  "clermontferrand": {
+    "code": "CLR",
+    "name": "Clermont-Ferrand",
+    "country": "fr",
+    "waves": 5,
+    "invaders": 47,
+    "score": 1790
+  },
+  "koln": {
+    "code": "KLN",
+    "name": "Cologne",
+    "country": "de",
+    "waves": 3,
+    "invaders": 27,
+    "score": 670
+  },
+  "contislesbains": {
+    "code": "CON",
+    "name": "Contis-les-Bains",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 2,
+    "score": 100
+  },
+  "cotedazur": {
+    "code": "CAZ",
+    "name": "French Riviera",
+    "country": "fr",
+    "waves": 4,
+    "invaders": 40,
+    "score": 1120
+  },
+  "daejeon": {
+    "code": "DJN",
+    "name": "Daejeon",
+    "country": "kr",
+    "waves": 1,
+    "invaders": 23,
+    "score": 500
+  },
+  "dhaka": {
+    "code": "DHK",
+    "name": "Dhaka",
+    "country": "bd",
+    "waves": 1,
+    "invaders": 6,
+    "score": 200
+  },
+  "dijon": {
+    "code": "DIJ",
+    "name": "Dijon",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 6,
+    "score": 230
+  },
+  "djerba": {
+    "code": "DJBA",
+    "name": "Djerba",
+    "country": "tn",
+    "waves": 1,
+    "invaders": 58,
+    "score": 2610
+  },
+  "eilat": {
+    "code": "ELT",
+    "name": "Eilat",
+    "country": "il",
+    "waves": 1,
+    "invaders": 2,
+    "score": 20
+  },
+  "faro": {
+    "code": "FAO",
+    "name": "Faro",
+    "country": "pt",
+    "waves": 1,
+    "invaders": 4,
+    "score": 110
+  },
+  "fontainebleau": {
+    "code": "FTBL",
+    "name": "Fontainebleau",
+    "country": "fr",
+    "waves": 7,
+    "invaders": 46,
+    "score": 1590
+  },
+  "forcalquier": {
+    "code": "FRQ",
+    "name": "Forcalquier",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 4,
+    "score": 100
+  },
+  "frankfurt": {
+    "code": "FKF",
+    "name": "Frankfurt",
+    "country": "de",
+    "waves": 1,
+    "invaders": 14,
+    "score": 430
+  },
+  "geneve": {
+    "code": "GNV",
+    "name": "Genève",
+    "country": "ch",
+    "waves": 2,
+    "invaders": 33,
+    "score": 530
+  },
+  "grenoble": {
+    "code": "GRN",
+    "name": "Grenoble",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 57,
+    "score": 570
+  },
+  "grude": {
+    "code": "GRU",
+    "name": "Grude",
+    "country": "ba",
+    "waves": 1,
+    "invaders": 3,
+    "score": 40
+  },
+  "grumeti": {
+    "code": "GRTI",
+    "name": "Grumeti",
+    "country": "tz",
+    "waves": 1,
+    "invaders": 8,
+    "score": 280
+  },
+  "halmstad": {
+    "code": "HALM",
+    "name": "Halmstad",
+    "country": "se",
+    "waves": 1,
+    "invaders": 2,
+    "score": 60
+  },
+  "hongkong": {
+    "code": "HK",
+    "name": "Hong Kong",
+    "country": "hk",
+    "waves": 7,
+    "invaders": 132,
+    "score": 4800
+  },
+  "istanbul": {
+    "code": "IST",
+    "name": "Istanbul",
+    "country": "tr",
+    "waves": 2,
+    "invaders": 20,
+    "score": 360
+  },
+  "katmandou": {
+    "code": "KAT",
+    "name": "Katmandu",
+    "country": "np",
+    "waves": 1,
+    "invaders": 28,
+    "score": 530
+  },
+  "laciotat": {
+    "code": "LCT",
+    "name": "La Ciotat",
+    "country": "fr",
+    "waves": 5,
+    "invaders": 9,
+    "score": 280
+  },
+  "lareunion": {
+    "code": "REUN",
+    "name": "La Réunion",
+    "country": "re",
+    "waves": 1,
+    "invaders": 11,
+    "score": 320
+  },
+  "lausanne": {
+    "code": "LSN",
+    "name": "Lausanne",
+    "country": "ch",
+    "waves": 1,
+    "invaders": 18,
+    "score": 270
+  },
+  "lille": {
+    "code": "LIL",
+    "name": "Lille",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 6,
+    "score": 110
+  },
+  "ljulbjana": {
+    "code": "LJU",
+    "name": "Ljubljana",
+    "country": "si",
+    "waves": 2,
+    "invaders": 42,
+    "score": 1180
+  },
+  "london": {
+    "code": "LDN",
+    "name": "London",
+    "country": "gb",
+    "waves": 19,
+    "invaders": 162,
+    "score": 4000
+  },
+  "losangeles": {
+    "code": "LA",
+    "name": "Los Angeles",
+    "country": "us",
+    "waves": 11,
+    "invaders": 214,
+    "score": 5810
+  },
+  "luberon": {
+    "code": "LBR",
+    "name": "Luberon",
+    "country": "fr",
+    "waves": 2,
+    "invaders": 8,
+    "score": 290
+  },
+  "lyon": {
+    "code": "LY",
+    "name": "Lyon",
+    "country": "fr",
+    "waves": 4,
+    "invaders": 48,
+    "score": 640
+  },
+  "malaga": {
+    "code": "MLGA",
+    "name": "Málaga",
+    "country": "es",
+    "waves": 1,
+    "invaders": 29,
+    "score": 1020
+  },
+  "manchester": {
+    "code": "MAN",
+    "name": "Manchester",
+    "country": "gb",
+    "waves": 1,
+    "invaders": 47,
+    "score": 970
+  },
+  "marrakech": {
+    "code": "MRAK",
+    "name": "Marrakech",
+    "country": "ma",
+    "waves": 1,
+    "invaders": 4,
+    "score": 120
+  },
+  "marseille": {
+    "code": "MARS",
+    "name": "Marseille",
+    "country": "fr",
+    "waves": 4,
+    "invaders": 97,
+    "score": 3270
+  },
+  "melbourne": {
+    "code": "MLB",
+    "name": "Melbourne",
+    "country": "au",
+    "waves": 1,
+    "invaders": 25,
+    "score": 440
+  },
+  "menorca": {
+    "code": "MEN",
+    "name": "Menorca",
+    "country": "es",
+    "waves": 1,
+    "invaders": 5,
+    "score": 140
+  },
+  "miami": {
+    "code": "MIA",
+    "name": "Miami",
+    "country": "us",
+    "waves": 3,
+    "invaders": 85,
+    "score": 2850
+  },
+  "mombasa": {
+    "code": "MBSA",
+    "name": "Mombasa",
+    "country": "ke",
+    "waves": 1,
+    "invaders": 10,
+    "score": 220
+  },
+  "montauban": {
+    "code": "MTB",
+    "name": "Montauban",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 11,
+    "score": 230
+  },
+  "montpellier": {
+    "code": "MPL",
+    "name": "Montpellier",
+    "country": "fr",
+    "waves": 2,
+    "invaders": 42,
+    "score": 740
+  },
+  "munich": {
+    "code": "MUN",
+    "name": "Munich",
+    "country": "de",
+    "waves": 1,
+    "invaders": 18,
+    "score": 710
+  },
+  "nantes": {
+    "code": "NA",
+    "name": "Nantes",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 3,
+    "score": 40
+  },
+  "newcastle": {
+    "code": "NCL",
+    "name": "Newcastle",
+    "country": "gb",
+    "waves": 3,
+    "invaders": 25,
+    "score": 510
+  },
+  "newyork": {
+    "code": "NY",
+    "name": "New York",
+    "country": "us",
+    "waves": 9,
+    "invaders": 219,
+    "score": 6760
+  },
+  "nimes": {
+    "code": "NIM",
+    "name": "Nîmes",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 5,
+    "score": 90
+  },
+  "noordwijk": {
+    "code": "NOO",
+    "name": "Noordwijk",
+    "country": "nl",
+    "waves": 1,
+    "invaders": 10,
+    "score": 480
+  },
+  "paris": {
+    "code": "PA",
+    "name": "Paris",
+    "country": "fr",
+    "waves": 132,
+    "invaders": 1531,
+    "score": 41980
+  },
+  "pau": {
+    "code": "PAU",
+    "name": "Pau",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 10,
+    "score": 120
+  },
+  "perpignan": {
+    "code": "PRP",
+    "name": "Perpignan",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 8,
+    "score": 230
+  },
+  "perth": {
+    "code": "PRT",
+    "name": "Perth",
+    "country": "au",
+    "waves": 1,
+    "invaders": 26,
+    "score": 400
+  },
+  "potosi": {
+    "code": "POTI",
+    "name": "Potosi",
+    "country": "bo",
+    "waves": 1,
+    "invaders": 53,
+    "score": 2030
+  },
+  "rabat": {
+    "code": "RBA",
+    "name": "Rabat",
+    "country": "ma",
+    "waves": 1,
+    "invaders": 20,
+    "score": 700
+  },
+  "ravenna": {
+    "code": "RA",
+    "name": "Ravenna",
+    "country": "it",
+    "waves": 2,
+    "invaders": 40,
+    "score": 1550
+  },
+  "redu": {
+    "code": "RDU",
+    "name": "Redu",
+    "country": "be",
+    "waves": 1,
+    "invaders": 6,
+    "score": 280
+  },
+  "rennes": {
+    "code": "RN",
+    "name": "Rennes",
+    "country": "fr",
+    "waves": 2,
+    "invaders": 4,
+    "score": 110
+  },
+  "rome": {
+    "code": "ROM",
+    "name": "Rome",
+    "country": "it",
+    "waves": 3,
+    "invaders": 75,
+    "score": 2370
+  },
+  "rotterdam": {
+    "code": "RTD",
+    "name": "Rotterdam",
+    "country": "nl",
+    "waves": 2,
+    "invaders": 26,
+    "score": 340
+  },
+  "sandiego": {
+    "code": "SD",
+    "name": "San Diego",
+    "country": "us",
+    "waves": 1,
+    "invaders": 21,
+    "score": 700
+  },
+  "saopaulo": {
+    "code": "SP",
+    "name": "São Paulo",
+    "country": "br",
+    "waves": 1,
+    "invaders": 52,
+    "score": 2130
+  },
+  "tokyo": {
+    "code": "TK",
+    "name": "Tokyo",
+    "country": "jp",
+    "waves": 6,
+    "invaders": 138,
+    "score": 3240
+  },
+  "toulouse": {
+    "code": "TLS",
+    "name": "Toulouse",
+    "country": "fr",
+    "waves": 2,
+    "invaders": 11,
+    "score": 360
+  },
+  "valmorel": {
+    "code": "VLMO",
+    "name": "Valmorel",
+    "country": "fr",
+    "waves": 1,
+    "invaders": 3,
+    "score": 80
+  },
+  "varanasi": {
+    "code": "VRN",
+    "name": "Varanasi",
+    "country": "in",
+    "waves": 1,
+    "invaders": 14,
+    "score": 300
+  },
+  "versailles": {
+    "code": "VRS",
+    "name": "Versailles",
+    "country": "fr",
+    "waves": 12,
+    "invaders": 42,
+    "score": 1520
+  },
+  "visby": {
+    "code": "VSB",
+    "name": "Visby",
+    "country": "se",
+    "waves": 1,
+    "invaders": 3,
+    "score": 30
+  },
+  "wien": {
+    "code": "WN",
+    "name": "Vienna",
+    "country": "at",
+    "waves": 5,
+    "invaders": 56,
+    "score": 1220
+  },
+  "space": {
+    "code": "SPACE",
+    "name": "Space",
+    "country": "space",
+    "waves": 1,
+    "invaders": 2,
+    "score": 0
+  },
+  "seoul": {
+    "code": "SL",
+    "name": "Seoul",
+    "country": "kr",
+    "waves": 1,
+    "invaders": 14,
+    "score": 350
+  }
+}
+
+
