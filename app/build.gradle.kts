@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.delhoume.flashbattle"
+    namespace = "com.delhoume.flashyflash"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.delhoume.flashbattle"
+        applicationId = "com.delhoume.flashyflash"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -16,37 +16,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FlashBattle"
+        android:theme="@style/Theme.FlashyFlash"
         tools:targetApi="31">
         <activity
-            android:name=".ListsActivity"
+            android:name="com.delhoume.flashyflash.ListsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:label="@string/title_activity_lists"
-            android:theme="@style/Theme.FlashBattle.Fullscreen" />
+            android:theme="@style/Theme.FlashyFlash.Fullscreen" />
         <activity
-            android:name=".QRCodeActivity"
+            android:name="com.delhoume.flashyflash.QRCodeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:label="QRCode"
-            android:theme="@style/Theme.FlashBattle.Fullscreen" />
+            android:theme="@style/Theme.FlashyFlash.Fullscreen" />
         <activity
-            android:name=".CitiesActivity"
+            android:name="com.delhoume.flashyflash.CitiesActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:label="CitiesActivity"
-            android:theme="@style/Theme.FlashBattle.Fullscreen" />
+            android:theme="@style/Theme.FlashyFlash.Fullscreen" />
         <activity
-            android:name=".InvadersActivity"
+            android:name="com.delhoume.flashyflash.InvadersActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:label="InvadersActivity"
-            android:theme="@style/Theme.FlashBattle.Fullscreen" />
+            android:theme="@style/Theme.FlashyFlash.Fullscreen" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.delhoume.flashyflash.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.FlashBattle">
+            android:theme="@style/Theme.FlashyFlash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
