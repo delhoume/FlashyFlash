@@ -13,3 +13,4 @@ It can be a basis for a more polished app, not sure this one will go to producti
 
 In any case feel free to contact me for any question. 
 <img width="352" alt="image" src="https://github.com/user-attachments/assets/c03992f5-aea7-483f-8999-d4e537eaabb2" />
+![image](https://github.com/user-attachments/assets/e3329c7d-d67e-4717-bdc6-b66f84d19152)
