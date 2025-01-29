@@ -4,7 +4,7 @@ https://www.space-invaders.com/flashinvaders/
 
 Currently a work-in-progress, some parts work, some not and some in between
 
-The app is written in Kotlin and code is very naive as I learn Jetpack Commpose
+The app is written in Kotlin and code is very naive as I learn Jetpack Compose
 (and I don't like it :-)
 
 The app will crash often and is not finished
