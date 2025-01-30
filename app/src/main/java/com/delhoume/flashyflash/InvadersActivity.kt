@@ -4,9 +4,13 @@ import AutoSizeText
 import FontSizeRange
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.ContentProvider
+import android.content.ContentResolver
+import android.content.ContentUris
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -81,6 +85,9 @@ import kotlinx.coroutines.launch
 import my.nanihadesuka.compose.LazyVerticalGridScrollbar
 import my.nanihadesuka.compose.ScrollbarSelectionMode
 import my.nanihadesuka.compose.ScrollbarSettings
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStreamReader
 import java.net.URLEncoder
 
 
@@ -207,10 +214,12 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
 
             if (showSingleFilePicker) {
                 val fileType = listOf("txt")
-                FilePicker(showSingleFilePicker, fileExtensions = fileType) { pfile ->
-                    if (pfile != null) {
-//                        Uri.parse(pfile.platformFile as String?)
-                        state.value = "PA_1000"
+                FilePicker(showSingleFilePicker, fileExtensions = fileType) { platformFile ->
+                    if (platformFile != null) {
+                        pathSingleChosen = platformFile.path
+                        val uri = Uri.parse(platformFile.path)
+                        val contents: String = readTextFromUri(contentResolver, uri)
+                        state.value = contents
                     }
                     showSingleFilePicker = false
                 }
@@ -229,6 +238,21 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
             )
         }
     }
+}
+
+@Throws(IOException::class)
+private fun readTextFromUri(contentResolver: ContentResolver, uri: Uri): String {
+    val stringBuilder = StringBuilder()
+    contentResolver.openInputStream(uri)?.use { inputStream ->
+        BufferedReader(InputStreamReader(inputStream)).use { reader ->
+            var line: String? = reader.readLine()
+            while (line != null) {
+                stringBuilder.append(line)
+                line = reader.readLine()
+            }
+        }
+    }
+    return stringBuilder.toString()
 }
 
 fun CopyToClipboard(text: String, context: Context) {
