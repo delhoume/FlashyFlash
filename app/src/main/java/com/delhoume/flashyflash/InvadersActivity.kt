@@ -3,10 +3,7 @@ package com.delhoume.flashyflash
 import AutoSizeText
 import FontSizeRange
 import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.ContentProvider
 import android.content.ContentResolver
-import android.content.ContentUris
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -55,8 +52,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.ClipEntry
+import androidx.compose.ui.platform.ClipboardManager
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -119,7 +118,7 @@ class InvadersActivity : ComponentActivity() {
             strInput = "PA_1500 POTI_01 BAB_01+9 VRS_12"
 
         setContent {
-            FlashyFlashTheme  {
+            FlashyFlashTheme {
                 var inputState = remember { mutableStateOf(strInput) }
                 var pgstate = rememberPagerState { 2 }
                 var invaders = ListFromFlashfile(inputState.value)
@@ -152,6 +151,7 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
     var flashfile = getFlashFileContents(invaders)
     var flatlist = getFlatFileContents(invaders)
     var context: Context = LocalContext.current
+    var clipmgr: ClipboardManager = LocalClipboardManager.current
     var contentResolver = context.contentResolver
     var showSingleFilePicker by remember { mutableStateOf(false) }
     var pathSingleChosen by remember { mutableStateOf("") }
@@ -187,7 +187,7 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
                     .weight(1.0f)
                     .fillMaxWidth()
                     .clickable {
-                        CopyToClipboard(flashfile, context)
+                        CopyToClipboard(flashfile, context, clipmgr)
                     }
 
             )
@@ -197,8 +197,26 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
                     .weight(1.0f)
                     .fillMaxSize()
                     .clickable {
-                        CopyToClipboard(flatlist, context)
+                        CopyToClipboard(flatlist, context, clipmgr)
                     }
+            )
+            StandardText(
+                text = "Import from clipboard",
+                modifier = Modifier
+                    .weight(1.0f)
+                    .fillMaxSize()
+                    .clickable {
+                        ImportFromClipboard(state, context, clipmgr)
+                    }
+            )
+            StandardText(
+                    text = "Append from clipboard",
+            modifier = Modifier
+                .weight(1.0f)
+                .fillMaxSize()
+                .clickable {
+                    AppendFromClipboard(state, context, clipmgr)
+                }
             )
             StandardText(
                 text = "Import QRCode",
@@ -206,7 +224,7 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
                     .weight(1.0f)
                     .fillMaxWidth()
                     .clickable {
-                        var intent = Intent(context, QRCodeActivity::class.java)
+                        Intent(context, QRCodeActivity::class.java)
 //                        startActivity
                         state.value = "PA_1500"
                     }
@@ -240,6 +258,45 @@ fun ExportPage(invaders: List<SpaceInvader>, state: MutableState<String>) {
     }
 }
 
+fun ImportFromClipboard(state: MutableState<String>, context: Context, clipmgr: ClipboardManager) {
+    val annotatedString = clipmgr.getText()
+    if (annotatedString != null) {
+        state.value = annotatedString.toString()
+        Toast
+            .makeText(context, "Imported", Toast.LENGTH_SHORT)
+            .show()
+    }
+}
+
+fun AppendFromClipboard(state: MutableState<String>, context: Context, clipmgr: ClipboardManager) {
+    val annotatedString = clipmgr.getText()
+    if (annotatedString != null) {
+        var input = state.value
+        var newcontents = annotatedString.toString()
+        var ff = FlashFile()
+        var decodedNew = ff.decodeString(newcontents)
+        var decodedInput = ff.decodeString(input)
+        decodedInput.addAll(decodedNew)
+        var allcontents = ff.encode(decodedInput, false, true)
+        var allstring = allcontents.fastJoinToString(" ")
+
+        state.value = allstring
+        Toast
+            .makeText(context, "Imported", Toast.LENGTH_SHORT)
+            .show()
+    }
+}
+
+fun CopyToClipboard(text: String, context: Context, clipmgr: ClipboardManager) {
+    val clipData = ClipData.newPlainText("Space Invaders", text)
+    val clipEntry = ClipEntry(clipData)
+    clipmgr.setClip(clipEntry)
+    Toast
+        .makeText(context, "Done", Toast.LENGTH_SHORT)
+        .show()
+}
+
+
 @Throws(IOException::class)
 private fun readTextFromUri(contentResolver: ContentResolver, uri: Uri): String {
     val stringBuilder = StringBuilder()
@@ -253,16 +310,6 @@ private fun readTextFromUri(contentResolver: ContentResolver, uri: Uri): String 
         }
     }
     return stringBuilder.toString()
-}
-
-fun CopyToClipboard(text: String, context: Context) {
-    val clipboardManager =
-        context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    val clip = ClipData.newPlainText("Space Invaders", text)
-    clipboardManager.setPrimaryClip(clip)
-    Toast
-        .makeText(context, "Done", Toast.LENGTH_SHORT)
-        .show()
 }
 
 fun getFlashFileContents(invaders: List<SpaceInvader>): String {
@@ -285,7 +332,7 @@ fun getFlatFileContents(invaders: List<SpaceInvader>): String {
 fun InvadersEntryPoint(invaders: List<SpaceInvader>, flashed: List<SpaceInvader>) {
     var editMode = rememberSaveable { mutableStateOf(false) }
     var displayMode = rememberSaveable { mutableIntStateOf(0) }
-    var trigger = rememberSaveable { mutableStateOf(true) }
+    rememberSaveable { mutableStateOf(true) }
 
 
     Column(
@@ -294,13 +341,13 @@ fun InvadersEntryPoint(invaders: List<SpaceInvader>, flashed: List<SpaceInvader>
             .fillMaxSize()
             .background(Color.Black)
     ) {
-    //    trigger.value = !trigger.value
+        //    trigger.value = !trigger.value
         var flashed = copyInvaders(invaders).filter { invader ->
             invader.flashed.value
         }
         var cities = copyInvaders(flashed).filter { invader -> invader.isCity() }
 
-            NormalHeader(editMode, invaders, displayMode)
+        NormalHeader(editMode, invaders, displayMode)
         if (editMode.value) {
             InvaderGrid(
                 invaders = invaders,
@@ -339,15 +386,16 @@ fun NormalHeader(
             modifier = Modifier.weight((2.0f))
         )
         FancyToggle(
-                text = "${flashed_cities_count.value} Cities",
+            text = "${flashed_cities_count.value} Cities",
             state = displayMode.value == 1,
-        modifier = Modifier.weight(2.0f)
-            .clickable {
-                if (displayMode.value == 1)
-                    displayMode.value = 0
-                else
-                    displayMode.value += 1
-            }
+            modifier = Modifier
+                .weight(2.0f)
+                .clickable {
+                    if (displayMode.value == 1)
+                        displayMode.value = 0
+                    else
+                        displayMode.value += 1
+                }
         )
         Spacer(
             modifier = Modifier
@@ -463,7 +511,7 @@ fun InvaderGrid(
                                 ++idx
                                 while (idx < invaders.size) {
                                     if (invaders[idx].isFlashedCity())
-                                            break
+                                        break
                                     idx++
                                 }
                                 if (idx < invaders.size)
